@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Survery Form</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <fieldset id="all-form">
+        <h1 id="title">Afforestation Survey</h1>
+        <p id="description">A short survey regarding planting of trees, Thank you</p>
+        <hr>
+        <form id="survey-form" method="post">
+            <label class="label" id="name-label">Enter Your Name: <input type="text" required class="field" id="name" name="name" placeholder="Ex: Ram"/></label>
+            <label class="label" for="email-label">Enter Your Email: <input type="email" required class="field" id="email" name="email" placeholder="Ex: ram123@gmail.com" /></label>
+            <label class="label" for="number-label">Enter Number: <input type="number" required class="field" id="number" name="number" min=1000000 max=999999999999999 placeholder="Ex: +9779841111111" /></label>
+            <hr>
+            <fieldset id="age-group">
+                <legend>Age Group:</legend>
+                <select id="dropdown">
+                    <option value="">(select one)</option>
+                    <option value="1">5-12</option>
+                    <option value="2">13-19</option>
+                    <option value="3">20-30</option>
+                    <option value="4">31-45</option>
+                    <option value="5">45+</option>
+                </select>
+             </fieldset>
+             <hr>
+             <fieldset id="planted-trees">
+                <legend>Have you ever planted trees?</legend>
+                <label id="yes-label"><input type="radio" checked id="yes" name="tree-plant" />Yes</label>
+                <label id="no-label"><input type="radio" id="no" name="tree-plant" />No</label>
+             </fieldset>
+             <hr>
+             <fieldset id="where-planted">
+                <legend>Where have you planted trees?</legend>
+                <label class="location" id="garden-label"><input type="checkbox" id="garden" name="location" />Garden</label>
+                <label class="location" id="neighborhood-label"><input type="checkbox" id="neighborhood" name="location" />Neighborhood</label>
+                <label class="location" id="forest-label"><input type="checkbox" id="forest" name="location" />Forest</label>
+                <label class="location" id="else-label"><input type="checkbox" checked id="somewhere-else" name="location" />Somewhere Else</label>
+             </fieldset>
+             <hr>
+             <fieldset id="commenting">
+                <legend>Comments:</legend>
+                <textarea id="comment" rows="4" cols="78" placeholder="Share your experience..."></textarea>
+             </fieldset>
+            <hr>
+            <input type="submit" id="submit" value="Submit">
+        </form>
+    </fieldset>
+</body>
+</html>
